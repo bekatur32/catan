@@ -5,8 +5,8 @@ from django.core.mail import send_mail
 from .models import Order
 
 
-token = '7342677552:AAF1ZTotSTb4ObFMvZUKElreZoqpslifpi0'
-chat_id = '-913101521'
+token = ''
+chat_id = ''
 apiURL = f'https://api.telegram.org/bot{token}/sendMessage'
 
 
