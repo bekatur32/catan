@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}株式会社 東山堂{% endblock %}
+
+{% block content %}
+<!-- Slideshow Section -->
+<section id="front-slide">
+    <script>
+        jQuery(document).ready(function($) {
+            $('.slide').vegas({
+                slides: [
+                    { src: '{% static "images/1.jpeg" %}' },
+                    { src: '{% static "images/2.jpeg" %}' },
+                    { src: '{% static "images/3.jpeg" %}' },
+                    { src: '{% static "images/" %}' },
+                ],
+                transition: 'fade',
+                timer: false
+            });
+            $('.slide-sp').vegas({
+                slides: [
+                    { src: '{% static "images/1.jpeg" %}' },
+                    { src: '{% static "images/2.jpeg" %}' },
+                    { src: '{% static "images/3.jpeg" %}' },
+                    { src: '{% static "images/jpg" %}' },
+                ],
+                transition: 'fade',
+                timer: false
+            });
+        });
+    </script>
+    <div class="slide-sp"></div>
+    <div class="slide"></div>
+    <div class="hokodome"><img src="{% static 'images/top/lg_hokodome_01.svg' %}" alt=""></div>
+</section>
+<section id="front-gradation"></section>
+
+<!-- Hokodome Section -->
+<section id="front-hokodome">
+    <div class="hokodome-img"><img src="{% static 'images/top/lg_hokodome_02.svg' %}" alt=""></div>
+    <h1 class="ryumin">Боевые искусства также подразумевают остановку меча.</h1>
+    <p class="text mb55">
+        «Бу» — эмблема компании Tozando.<br class="sp">
+        Это слово происходит от «остановить меч».<br>
+        Сдерживать эгоизм<br class="sp">
+        Закончить битву, подавить конфликт<br>
+        Дух «великой гармонии»<br class="sp">
+        Это включено.
+    </p>
+</section>
+
+<!-- About Us Section -->
+<section id="front-aboutus">
+    <div class="inr-box">
+        <p class="img"></p>
+        <h2><span class="en">О НАС</span><span class="ja">О Тозандо</span></h2>
+        <p class="text">
+            1989 Я хочу изучить японские боевые искусства.<br class="aboutus-sp">
+            Для зарубежных практикующих Кендо<br>
+            Мы начали продавать инструменты для меча за границу.<br class="aboutus-sp">
+            Это начало Тозандо.
+        </p>
+        <div class="btn_clear btn">
+            <a href="{% url 'blog:about' %}">ПОСМОТРЕТЬ ВСЕ</a>
+        </div>
+    </div>
+</section>
+
+<!-- Business Section -->
+<section id="front-business">
+    <div id="sec01">
+        <h2><span class="en">БИЗНЕС</span><span class="ja">Деловая информация</span></h2>
+        <p class="text mb35">
+            Мы создали собственную систему от производства до оптовой продажи и распределения.<br>
+            Мы поставляем высококачественное оборудование для боевых искусств мастерам боевых искусств в более чем 70 стран мира.
+        </p>
+        <div class="btn_clear btn"></div>
+    </div>
+    <div id="sec02">
+        <ul class="cats">
+            <li>
+                <div class="img sp">
+                    <img src="{% static 'images/top/business/im_man_sp.jpg' %}" srcset="{% static 'images/top/business/im_man_sp.jpg' %} 1x, {% static 'images/top/business/im_man_sp@2x.jpg' %} 2x" alt="">
+                </div>
+                <h3><span class="en">ПРОИЗВОДСТВО</span><span class="ja">производство</span></h3>
+                <p>Квалифицированные мастера производят доспехи Кендо и другие предметы отечественного производства.<br>
+                Мы продолжаем производить высококачественные инструменты для боевых искусств.</p>
+                <div class="more-btn">— MORE</div>
+            </li>
+            <li>
+                <div class="img sp">
+                    <img src="{% static 'images/top/business/im_mar_sp.jpg' %}" srcset="{% static 'images/top/business/im_mar_sp.jpg' %} 1x, {% static 'images/top/business/im_mar_sp@2x.jpg' %} 2x" alt="">
+                </div>
+                <h3><span class="en">МАРКЕТИНГ</span><span class="ja">распродажа</span></h3>
+                <p>ECСгруппируйте все каналы продаж, включая продажи, магазины, продажи и оптовую торговлю.
+                Это создает синергетический эффект.</p>
+                <div class="more-btn">— MORE</div>
+            </li>
+            <li>
+                <div class="img sp">
+                    <img src="{% static 'images/top/business/im_log_sp.jpg' %}" srcset="{% static 'images/top/business/im_log_sp.jpg' %} 1x, {% static 'images/top/business/im_log_sp@2x.jpg' %} 2x" alt="">
+                </div>
+                <h3><span class="en">ЛОГИСТИКА</span><span class="ja">логистика</span></h3>
+                <p>В одном из крупнейших логистических центров отрасли,<br>
+                Демонстрирует высокую распределительную способность.</p>
+                <div class="more-btn">— MORE</div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- Banner Section -->
+<section id="front-banner">
+    <ul class="link-bnr">
+        <li><a href="https://blog.tozando.com/" target="_blank"><img src="{% static 'images/top/bnr/bn_takahiko_blog.jpg' %}" srcset="{% static 'images/top/bnr/bn_takahiko_blog.jpg' %} 1x, {% static 'images/top/bnr/bn_takahiko_blog@2x.jpg' %} 2x" alt="木村隆彦BLOG"></a></li>
+        <li><a href="https://www.youtube.com/c/TOZANDOINTL" target="_blank"><img src="{% static 'images/top/bnr/bn_tozando_yt.jpg' %}" srcset="{% static 'images/top/bnr/bn_tozando_yt.jpg' %} 1x, {% static 'images/top/bnr/bn_tozando_yt@2x.jpg' %} 2x" alt="東山堂YouTube"></a></li>
+        <li><a href="https://www.kenja.tv/president/detkc64zb.html" target="_blank"><img src="{% static 'images/top/bnr/bn_kenjya.jpg' %}" srcset="{% static 'images/top/bnr/bn_kenjya.jpg' %} 1x, {% static 'images/top/bnr/bn_kenjya@2x.jpg' %} 2x" alt="代表取締役　木村隆彦インタビュー"></a></li>
+    </ul>
+</section>
+
+<!-- Store Section -->
+<section id="front-store">
+    <h2><span class="en">МАГАЗИН</span></h2>
+    <div class="btn-box">
+        <div class="btn_clear btn"><a href="{% url 'shop:product_list' %}">МАГАЗИН</a></div>
+    </div>
+</section>
+{% endblock %}
