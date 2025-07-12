@@ -33,4 +33,8 @@ COPY . .
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]# Открываем порт
+EXPOSE 8000
+
+# Запуск через gunicorn
+CMD ["gunicorn", "DjangoProject1.wsgi:application", "--bind", "0.0.0.0:8000"]
