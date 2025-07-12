@@ -1,13 +1,15 @@
-app = "my-django-app"  # например: "django-app"
+# Название приложения
+app = "my-django-app"
 
-primary_region = "ams"  # можно поменять на ближайший к тебе регион (ams, fra, iad, sin и т.д.)
+# Регион, где будет размещено приложение
+primary_region = "ams"
 
 [build]
-  image = "yourdockerhubusername/your-django-app:latest"  # если билдим образ вручную и пушим на DockerHub
+  image = "yourdockerhubusername/your-django-app:latest"
 
 [env]
   DEBUG = "False"
-  SECRET_KEY = 'django-insecure-*mn-=*8cc)_jw(^c($+k&_q!@4mon81xo)0#*vle==owx-axv4'
+  SECRET_KEY = "django-insecure-*mn-=*8cc)_jw(^c($+k&_q!@4mon81xo)0#*vle==owx-axv4"
   ALLOWED_HOSTS = ".fly.dev"
   REDIS_URL = "redis://default:@redis.internal:6379"
   DJANGO_SETTINGS_MODULE = "DjangoProject1.settings"
