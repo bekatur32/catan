@@ -1,13 +1,12 @@
 import redis
 from django.conf import settings
 from shop.models import Product
-
+import os
 # соединить с redis
-r = redis.Redis(
-    host=settings.REDIS_HOST,
-    port=settings.REDIS_PORT,
-    db=settings.REDIS_DB
-)
+redis_url = os.getenv("REDIS_URL", "redis://localhost:6379/1")
+
+# Создаём Redis клиент из URL
+r = redis.from_url(redis_url)
 
 
 class Recommender:
