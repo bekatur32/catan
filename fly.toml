@@ -1,4 +1,4 @@
-app = "имя-твоего-приложения"  # например: "django-app"
+app = "my-django-app"  # например: "django-app"
 
 primary_region = "ams"  # можно поменять на ближайший к тебе регион (ams, fra, iad, sin и т.д.)
 
