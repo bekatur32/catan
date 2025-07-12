@@ -3,9 +3,8 @@ app = "catanvlad"
 
 # Регион, где будет размещено приложение
 primary_region = "ams"
-
-#[build]
- # image = "yourdockerhubusername/your-django-app:latest"
+[build]
+  dockerfile = "Dockerfile"
 
 [env]
   DEBUG = "False"
