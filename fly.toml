@@ -10,8 +10,8 @@ primary_region = "ams"
   DEBUG = "False"
   SECRET_KEY = "django-insecure-*mn-=*8cc)_jw(^c($+k&_q!@4mon81xo)0#*vle==owx-axv4"
   ALLOWED_HOSTS = ".fly.dev"
-  REDIS_URL = "redis://default:@redis.internal:6379"
   DJANGO_SETTINGS_MODULE = "DjangoProject1.settings"
+  REDIS_URL = "redis://default:077fd3d4edf44aef88f0578ef37074ee@fly-catan-7p43pg.upstash.io:6379"
 
 [[services]]
   internal_port = 8000
